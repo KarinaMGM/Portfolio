@@ -1,23 +1,21 @@
+const btnTheme = document.getElementById("theme");
+const body = document.body;
 
-function sendEmail() {
+btnTheme.addEventListener("click", () => {
+  body.classList.toggle("dark-theme");
 
-    // Coleta os valores dos campos do formulário
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var assunto = document.getElementById('assunto').value;
-    var mensagem = document.getElementById('mensagem').value;
+  // salva preferência no navegador
+  if (body.classList.contains("dark-theme")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
 
-    // Email.send({
-    //     Host: "smtp.gmail.com",
-    //     Username: email,
-    //     Password: "Enter your password",
-    //     To: 'karimacedog@gmail.com',
-    //     From: nome,
-    //     Subject: assunto,
-    //     Body: mensagem,
-    // })
-    //     .then(function (message) {
-            alert("Email enviado com sucesso")
-        // });
-
+// quando a página carregar, aplica o último tema salvo
+window.onload = () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark-theme");
+  }
 };

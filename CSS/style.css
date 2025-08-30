@@ -10,12 +10,39 @@ a {
 
 /* Variáveis de cores */
 :root {
+      /* Tema claro (padrão) */
     --cor-de-fundo:  #f4e6fd;
     --cor-de-link: #000000;
     --cor-de-texto: #113946;
-    --cor-de-fundo2: linear-gradient(to left, #c5a3af,#8fdfdd, #f6f6aa);
+    --cor-de-fundo2: linear-gradient(to left, #c0b2b7,#aed4d4);
     --cor-da-box: #ffffff;
     --cor-do-botao: #113946;
+}
+
+
+    /* Tema escuro */
+body.dark-theme {
+  --cor-de-fundo: #1e1a2b;
+  --cor-de-texto: #f5f5f5;
+  --cor-card: #1e1e1e;
+}
+/* aplica as variáveis no layout */
+body {
+  background-color: var(--cor-de-fundo);
+  color: var(--cor-de-texto);
+  transition: background 0.3s, color 0.3s;
+}
+
+.academic__courses__box {
+  background-color: var(--cor-card);
+}
+
+body.dark-theme .menu__list a{
+    color:#f5f5f5;
+}
+
+.dark-theme .menu__list__item:hover {
+  background: rgba(244, 244, 246, 0.625); /* sombreado claro no hover */
 }
 
 /* Body e Wrapper */
@@ -260,6 +287,21 @@ body {
     margin-bottom: 8%;
 }
 
+.academic__courses__list{
+list-style: none;
+  padding: 0;
+  margin: 0;
+
+  /* flexbox para centralizar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* espaço entre logo, título e subtítulo */
+  height: 100%; /* garante centralização dentro do box */
+  text-align: center;
+}
+
 .academic__title {
     text-align: center;
     font-size: 32px;
@@ -275,8 +317,8 @@ body {
 }
 
 .academic__courses__box {
-    width: 250px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background-color: var(--cor-de-fundo);
     border-radius: 25px;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
@@ -290,9 +332,11 @@ body {
     margin-top: 2%;
 }
 
-.academic__courses__item__img {
-    max-width: 120px;
+.academic__courses__item__img img{
+    max-width: 100px; 
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .academic__courses__item__title {
