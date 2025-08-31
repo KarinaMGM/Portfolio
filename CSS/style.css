@@ -11,7 +11,7 @@
     /* Variáveis de cores */
     :root {
         /* Tema claro (padrão) */
-        --cor-de-fundo:  #f4e6fd;
+        --cor-de-fundo:  #ede8f0;
         --cor-de-link: #000000;
         --cor-de-texto: #113946;
         --cor-de-fundo2: linear-gradient(to left, #c0b2b7,#aed4d4);
@@ -22,7 +22,7 @@
 
         /* Tema escuro */
     body.dark-theme {
-    --cor-de-fundo: #1e1a2b;
+    --cor-de-fundo: #201a34;
     --cor-de-texto: #f5f5f5;
     --cor-card: #1e1e1e;
     }
