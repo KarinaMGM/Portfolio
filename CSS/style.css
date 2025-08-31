@@ -373,6 +373,11 @@
         margin: 0 5%;
     }
 
+    .menu__list{
+        flex-wrap: wrap;
+        line-height: 30px;
+    }
+
     .title__bio {
         font-size: 32px;
     }
