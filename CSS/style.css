@@ -390,6 +390,10 @@
         height: auto;
     }
 
+    .menu__list{
+        flex-direction: column;
+    }
+
     .title__div {
         flex-direction: column;
         text-align: center;
